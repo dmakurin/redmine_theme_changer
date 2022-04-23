@@ -7,6 +7,9 @@ cp "$GITPODDIR"/ignore "$IGNOREDIR"
 cd ..
 BASEDIR=$(pwd)
 PLUGIN_NAME=$(basename "$BASEDIR")
+if [ -f Gemfile_for_test ]; then
+  cp Gemfile_for_test Gemfile
+fi
 cd ..
 REDMINEDIR=$(pwd)/redmine
 if [ ! -d redmine ]; then
